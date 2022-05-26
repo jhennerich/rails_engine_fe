@@ -1,0 +1,10 @@
+<h1>Merchants</h1>
+
+<% if @merchants %>
+  <% @merchants.each do |merchant| %>
+    <div id='merchant'>
+      <p><strong><%= link_to "#{merchant[:attributes][:name]}", "/merchants/#{merchant[:id]}",
+         method: :get %></strong></p>
+    </div>
+  <% end %>
+<% end %>
